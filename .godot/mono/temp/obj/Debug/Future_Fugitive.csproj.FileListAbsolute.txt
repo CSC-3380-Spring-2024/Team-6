@@ -1,0 +1,17 @@
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\bin\Debug\Future_Fugitive.deps.json
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\bin\Debug\Future_Fugitive.runtimeconfig.json
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\bin\Debug\Future_Fugitive.dll
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\bin\Debug\Future_Fugitive.pdb
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_Fugitive.csproj.AssemblyReference.cache
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_Fugitive.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_Fugitive.AssemblyInfoInputs.cache
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_Fugitive.AssemblyInfo.cs
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_Fugitive.csproj.CoreCompileInputs.cache
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_F.4CB3A7F9.Up2Date
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_Fugitive.dll
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\refint\Future_Fugitive.dll
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_Fugitive.pdb
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\Future_Fugitive.genruntimeconfig.cache
+C:\Users\matth\Desktop\Future_Fugitive\.godot\mono\temp\obj\Debug\ref\Future_Fugitive.dll

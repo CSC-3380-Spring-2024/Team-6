@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://dl7ycfqdnipx6"]
+
+[ext_resource type="FontFile" uid="uid://m0r78rti0mpi" path="res://PressStart2P-Regular.ttf" id="1_sw7c7"]
+[ext_resource type="Script" path="res://StartButton.cs" id="2_ae3vh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwe08"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50six"]
+bg_color = Color(0.811765, 0.505882, 0.462745, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2wt6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v78qg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.542
+anchor_right = 0.5
+anchor_bottom = 0.542
+offset_left = -195.0
+offset_top = -95.216
+offset_right = 190.0
+offset_bottom = 89.784
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_sw7c7")
+theme_override_font_sizes/font_size = 67
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwe08")
+theme_override_styles/hover = SubResource("StyleBoxFlat_50six")
+text = "START"
+script = ExtResource("2_ae3vh")
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_sw7c7")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwe08")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p2wt6")
+text = "OPTIONS"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_sw7c7")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwe08")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p2wt6")
+text = "QUIT"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -408.0
+offset_right = 408.0
+offset_bottom = 303.0
+grow_horizontal = 2
+theme_override_colors/background_color = Color(0.694118, 0.694118, 0.694118, 0)
+theme_override_colors/font_selected_color = Color(0.85098, 0.454902, 0.611765, 1)
+theme_override_fonts/font = ExtResource("1_sw7c7")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_v78qg")
+text = " Future 
+Fugitive"
+
+[connection signal="mouse_entered" from="VBoxContainer/StartButton" to="VBoxContainer/StartButton" method="_on_mouse_entered"]

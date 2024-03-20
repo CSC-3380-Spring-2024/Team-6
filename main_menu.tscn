@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dl7ycfqdnipx6"]
 
-[ext_resource type="FontFile" uid="uid://m0r78rti0mpi" path="res://PressStart2P-Regular.ttf" id="1_sw7c7"]
+[ext_resource type="FontFile" uid="uid://m0r78rti0mpi" path="res://GeneralAssets/PressStart2P-Regular.ttf" id="1_sw7c7"]
 [ext_resource type="Script" path="res://StartButton.cs" id="2_ae3vh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwe08"]

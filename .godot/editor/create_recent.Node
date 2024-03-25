@@ -1,5 +1,15 @@
-TextEdit
+CanvasLayer
 Button
 VBoxContainer
+PanelContainer
+Panel
+TextEdit
+MarginContainer
+Label
+ColorRect
 TextureRect
-Node
+RichTextLabel
+TextureButton
+CenterContainer
+AnimationPlayer
+AnimationTree

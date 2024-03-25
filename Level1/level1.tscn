@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://x7lm63kt0w25"]
+
+[ext_resource type="PackedScene" uid="uid://cqndomg20gku8" path="res://MainMenu/pause_menu.tscn" id="1_h3n3t"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "LEVEL 1"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("1_h3n3t")]

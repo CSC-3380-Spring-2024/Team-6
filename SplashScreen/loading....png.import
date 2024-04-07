@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1q14qcuikaio"
-path="res://.godot/imported/WesternImage.png-734c0f37a459d7e28dffcf20f0169ea1.ctex"
+uid="uid://byhktlaoimjjx"
+path="res://.godot/imported/loading....png-46a421c2db3206a9498883d9e185ad61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SplashScreen/WesternImage.png"
-dest_files=["res://.godot/imported/WesternImage.png-734c0f37a459d7e28dffcf20f0169ea1.ctex"]
+source_file="res://SplashScreen/loading....png"
+dest_files=["res://.godot/imported/loading....png-46a421c2db3206a9498883d9e185ad61.ctex"]
 
 [params]
 

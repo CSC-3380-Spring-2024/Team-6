@@ -6,6 +6,7 @@ public partial class pause_menu : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Visible = false;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,6 +17,7 @@ public partial class pause_menu : Control
 
 	public void resume() {
 		GetTree().Paused = false;
+		Visible = false;
 	}
 
 	public void pause() {
@@ -23,13 +25,14 @@ public partial class pause_menu : Control
 	}
 
 	public void testEsc() {
-		if(Input.IsActionJustPressed("esc") && GetTree().Paused == false) 
+		if(Input.IsActionJustPressed("esc") && !GetTree().Paused) 
 		{
+			Visible = true;
 			pause();
 			GD.Print("ESC1 Pressed");
-		}
-
-		if(Input.IsActionJustPressed("esc") && GetTree().Paused == true) {
+		}else
+			if(Input.IsActionJustPressed("esc") && GetTree().Paused) {
+			Visible = false;
 			resume();
 			GD.Print("ESC2 Pressed");
 		}

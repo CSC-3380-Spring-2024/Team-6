@@ -13,10 +13,10 @@ config_version=5
 config/name="Future_Fugitive"
 run/main_scene="res://MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
-boot_splash/bg_color=Color(0.572549, 0.521569, 0.454902, 1)
-boot_splash/image="res://SplashScreen/WesternImage.png"
+boot_splash/bg_color=Color(0.960784, 0.890196, 0.74902, 1)
+boot_splash/image="res://SplashScreen/loading....png"
 config/icon="res://icon.svg"
-boot_splash/minimum_display_time=1500
+boot_splash/minimum_display_time=2000
 
 [display]
 

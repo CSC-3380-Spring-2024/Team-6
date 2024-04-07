@@ -1,6 +1,5 @@
-res://MainMenu/main_menu.tscn
 res://Level1/level1.tscn
-res://MainMenu/main_menu.cs
-res://MainMenu/Play.cs
 res://MainMenu/pause_menu.tscn
+res://MainMenu/main_menu.cs
 res://MainMenu/pause_menu.cs
+res://MainMenu/main_menu.tscn

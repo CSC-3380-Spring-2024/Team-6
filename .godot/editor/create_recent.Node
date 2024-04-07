@@ -1,3 +1,7 @@
+TextureRect
+Control
+Label
+CenterContainer
 CanvasLayer
 Button
 VBoxContainer
@@ -5,11 +9,6 @@ PanelContainer
 Panel
 TextEdit
 MarginContainer
-Label
 ColorRect
-TextureRect
 RichTextLabel
 TextureButton
-CenterContainer
-AnimationPlayer
-AnimationTree

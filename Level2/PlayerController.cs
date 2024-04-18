@@ -26,6 +26,8 @@ public partial class PlayerController : CharacterBody2D
 
 	private float climbTimerReset = 5f;
 
+	private int direction2 = 0;
+
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
@@ -59,7 +61,7 @@ public partial class PlayerController : CharacterBody2D
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
 		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-
+		
 		if(!isDashing){
 
 			if (direction != Vector2.Zero)
@@ -150,6 +152,22 @@ public partial class PlayerController : CharacterBody2D
 
 		Velocity = velocity;
 		MoveAndSlide();
+
+		//Sprite Animations + Movements
+		
+		if(Input.IsActionPressed("ui_left")){
+			direction2 -= 1;
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Running Left");
+		}
+		if(Input.IsActionPressed("ui_right")){
+			direction2 += 1;
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Running Right");
+		}
+		if(direction2 == 0){
+			GetNode<AnimatedSprite2D>("AnimatedSprited2D").Play("Idle");
+		}
+		//note for tmr
+		//make it go back to idle animation when not pressing left or right^^
 	}
 
 	private void processClimb(float delta){

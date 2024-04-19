@@ -3,8 +3,8 @@ using System;
 
 public partial class PlayerController : CharacterBody2D
 {
-	public const float Speed = 150.0f;
-	public const float JumpVelocity = -300.0f;
+	public const float Speed = 200.0f;
+	public const float JumpVelocity = -600.0f;
 
 	private int dashSpeed = 300;
 
@@ -14,9 +14,19 @@ public partial class PlayerController : CharacterBody2D
 
 	private float dashTimerReset = .2f;
 
+	private bool isDashAvailable = true; 
+
 	private bool canClimb = true;
 
 	private int climbSpeed = 100;
+
+	private bool isClimbing = false;
+
+	private float climbTimer = 5f; 
+
+	private float climbTimerReset = 5f;
+
+	private int direction2 = 0;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -29,21 +39,29 @@ public partial class PlayerController : CharacterBody2D
 
 		
 		// Add the gravity.
-		if (!IsOnFloor()){}
-			velocity.Y += gravity * (float)delta;
+		if (!IsOnFloor()){
+			velocity.Y += gravity * ((float)delta);
 			canClimb = true;
+			isDashAvailable = true;
 			
+		}
 
 		// Handle Jump.
-		if (Input.IsActionPressed("ui_accept") && IsOnFloor())
-			velocity.Y = JumpVelocity;
-			
-			
+		if(IsOnFloor()){
+			if(Input.IsActionPressed("ui_accept")){
+				velocity.Y = JumpVelocity;
+				
+			}
+			canClimb = true;
+			isDashAvailable = true;
+		}
+		
+		
 
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
 		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-
+		
 		if(!isDashing){
 
 			if (direction != Vector2.Zero)
@@ -56,33 +74,35 @@ public partial class PlayerController : CharacterBody2D
 			}
 		}
 
+		if(isDashAvailable){
 
-		if(Input.IsActionPressed("dash")){ //dashing
+			if(Input.IsActionPressed("dash")){ //dashing
 
-			if(Input.IsActionPressed("ui_left")){
-				velocity.X = -dashSpeed;
-				isDashing = true;
-			}
-			if(Input.IsActionPressed("ui_right")){
-				velocity.X = dashSpeed;
-				isDashing = true;
-			}
-			if(Input.IsActionPressed("ui_up")){
-				velocity.Y = -dashSpeed;
-				isDashing = true;
-			}
-			if(Input.IsActionPressed("ui_right") && Input.IsActionPressed("ui_up")){
-				velocity.X = dashSpeed;
-				velocity.Y = -dashSpeed;
-				isDashing = true;
-			}
-			if(Input.IsActionPressed("ui_left") && Input.IsActionPressed("ui_up")){
-				velocity.X = -dashSpeed;
-				velocity.Y = -dashSpeed;
-				isDashing = true;
-			}
+				if(Input.IsActionPressed("ui_left")){
+					velocity.X = -dashSpeed;
+					isDashing = true;
+				}
+				if(Input.IsActionPressed("ui_right")){
+					velocity.X = dashSpeed;
+					isDashing = true;
+				}
+				if(Input.IsActionPressed("ui_up")){
+					velocity.Y = -dashSpeed;
+					isDashing = true;
+				}
+				if(Input.IsActionPressed("ui_right") && Input.IsActionPressed("ui_up")){
+					velocity.X = dashSpeed;
+					velocity.Y = -dashSpeed;
+					isDashing = true;
+				}
+				if(Input.IsActionPressed("ui_left") && Input.IsActionPressed("ui_up")){
+					velocity.X = -dashSpeed;
+					velocity.Y = -dashSpeed;
+					isDashing = true;
+				}
 
-			dashTimer = dashTimerReset;
+				dashTimer = dashTimerReset;
+		}
 
 
 		}
@@ -94,12 +114,23 @@ public partial class PlayerController : CharacterBody2D
 				isDashing = false;
 				velocity = new Vector2(0,0); //stops the slding when dashing
 			}
+		} 
+		else if(!isClimbing){
+			velocity.Y += gravity * (float)delta; 
+		}else{
+			climbTimer -= (float)delta;
+			if(climbTimer <= 0){
+				isClimbing = false;
+				canClimb = false; 
+				climbTimer = climbTimerReset;
+			}
 		}
 
 
 		if(Input.IsActionPressed("climb") && (GetNode<RayCast2D>("RayCastLeft").IsColliding() || GetNode<RayCast2D>("RayCastRight").IsColliding() || 
 		GetNode<RayCast2D>("RayCastRightClimb").IsColliding() || GetNode<RayCast2D>("RayCastLeftClimb").IsColliding() )){    //wallclimbing
 			if(canClimb){
+				isClimbing = true;
 				if(Input.IsActionPressed("ui_up")){
 					velocity.Y = -climbSpeed;
 				}
@@ -110,12 +141,32 @@ public partial class PlayerController : CharacterBody2D
 					velocity = new Vector2(0,0);
 				}
 
+			}else{
+				isClimbing = false;
 			}
+
+		}else{
+			isClimbing = false;
 		}
 	
 
 		Velocity = velocity;
 		MoveAndSlide();
+
+		//Sprite Animations + Movements
+		
+		if(Input.IsActionPressed("ui_left")){
+			direction2 -= 1;
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Running Left");
+		}
+		if(Input.IsActionPressed("ui_right")){
+			direction2 += 1;
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Running Right");
+		}
+		if(direction2 == 0){
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Idle Right");
+		}
+		
 	}
 
 	private void processClimb(float delta){

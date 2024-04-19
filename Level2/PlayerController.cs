@@ -164,10 +164,9 @@ public partial class PlayerController : CharacterBody2D
 			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Running Right");
 		}
 		if(direction2 == 0){
-			GetNode<AnimatedSprite2D>("AnimatedSprited2D").Play("Idle");
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Idle Right");
 		}
-		//note for tmr
-		//make it go back to idle animation when not pressing left or right^^
+		
 	}
 
 	private void processClimb(float delta){

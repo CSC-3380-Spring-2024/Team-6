@@ -1,5 +1,3 @@
+res://healthBar.tscn
 res://Level1/level1.tscn
-res://MainMenu/pause_menu.tscn
-res://MainMenu/main_menu.cs
-res://MainMenu/pause_menu.cs
-res://MainMenu/main_menu.tscn
+res://HUD/healthBar.tscn

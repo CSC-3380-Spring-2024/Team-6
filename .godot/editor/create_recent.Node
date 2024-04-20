@@ -1,8 +1,10 @@
+TextureProgressBar
+CanvasLayer
+ProgressBar
 TextureRect
 Control
 Label
 CenterContainer
-CanvasLayer
 Button
 VBoxContainer
 PanelContainer
@@ -10,5 +12,3 @@ Panel
 TextEdit
 MarginContainer
 ColorRect
-RichTextLabel
-TextureButton

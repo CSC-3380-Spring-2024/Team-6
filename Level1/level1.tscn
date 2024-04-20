@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvjx7gsn4pv7c"]
+[gd_scene load_steps=10 format=3 uid="uid://cvjx7gsn4pv7c"]
 
 [ext_resource type="Texture2D" uid="uid://dvdpci3bs86w4" path="res://Level1/BG.png" id="1_0fvrp"]
 [ext_resource type="PackedScene" uid="uid://cqndomg20gku8" path="res://MainMenu/pause_menu.tscn" id="1_h3n3t"]
 [ext_resource type="Texture2D" uid="uid://cmqjdn6b5gf0y" path="res://Level1/Tile.png" id="2_ppcsx"]
+[ext_resource type="PackedScene" uid="uid://dptpqmd0oxd4k" path="res://HUD/healthBar.tscn" id="4_vj4hv"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ib4r6"]
 tile_data = PackedInt32Array(0, 589824, 268435456, 65536, 196608, 1, 131072, 196608, 3, 1, 524288, 0, 65537, 393216, 1, 131073, 393216, 3, 2, 524288, 0, 65538, 393216, 1, 131074, 393216, 3, 3, 589824, 0, 65539, 589824, 1, 131075, 589824, 3)
@@ -792,3 +793,5 @@ centered = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_h3n3t")]
 visible = false
+
+[node name="Control" parent="." instance=ExtResource("4_vj4hv")]

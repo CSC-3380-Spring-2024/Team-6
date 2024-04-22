@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713824810
+::res://::1713825010
 icon.svg::CompressedTexture2D::2879830636363989866::1710966166::1710966166::1::::<><>::
 Label.cs::CSharpScript::-1::1713628271::0::1::::<>Label<>::
 README.md::TextFile::-1::1713821344::0::1::::<><>::
@@ -15,13 +15,12 @@ healthBar.tscn::PackedScene::8252257846641017704::1713630576::0::1::::<><>::uid:
 healthbarProgress.png::CompressedTexture2D::39980081916874409::1713627044::1713627436::1::::<><>::
 healthbarUnder.png::CompressedTexture2D::1118589642386099775::1713627044::1713627436::1::::<><>::
 score.tscn::PackedScene::1411651900275156473::1713628343::0::1::::<><>::uid://m0r78rti0mpi::::res://GeneralAssets/PressStart2P-Regular.ttf<>res://Label.cs
-::res://Level1/::1713815312
+::res://Level1/::1713825040
 Background1.png::CompressedTexture2D::2527139833763109277::1712523265::1713627436::1::::<><>::
 Background2.png::CompressedTexture2D::7064775177184466233::1712523265::1713627436::1::::<><>::
 BG.png::CompressedTexture2D::8640335690731617229::1713627044::1713627437::1::::<><>::
 house01.png::CompressedTexture2D::8246331899536155919::1712523265::1713627436::1::::<><>::
 house02.png::CompressedTexture2D::3851048949968261471::1712523265::1713627436::1::::<><>::
-level1.tscn::PackedScene::6266840463386615038::1713815312::0::1::::<><>::uid://dvdpci3bs86w4::::res://Level1/BG.png<>uid://cqndomg20gku8::::res://MainMenu/pause_menu.tscn<>uid://cmqjdn6b5gf0y::::res://Level1/Tile.png<>uid://dptpqmd0oxd4k::::res://HUD/healthBar.tscn<>uid://ud2x23rw1sof::::res://HUD/score.tscn
 main.tscn::PackedScene::6266840463386615038::1713627044::0::1::::<><>::uid://i6vjyebuoe5v::::res://BG.png<>uid://61jdvn531nei::::res://Tile.png<>uid://ctu1f6jctooew::::res://kenney_voxel-pack 2/Preview.png
 Preview.png::CompressedTexture2D::9106007260138818471::1713627044::1713627436::1::::<><>::
 sprite_2.png::CompressedTexture2D::6535190285769971179::1712523265::1713627436::1::::<><>::

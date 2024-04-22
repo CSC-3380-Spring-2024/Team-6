@@ -1,3 +1,4 @@
+res://Level1/level1.tscn
 res://Label.cs
 res://MainMenu/main_menu.cs
 res://MainMenu/pause_menu.cs

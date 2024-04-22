@@ -19,6 +19,10 @@ offset_top = 8.0
 offset_right = 72.0
 offset_bottom = 18.0
 scale = Vector2(4, 4)
+<<<<<<< HEAD
+value = 50.0
+=======
 value = 90.0
+>>>>>>> 9c1c8d6fbdfcb1c1945906f1ecceb0ad076a1551
 texture_under = ExtResource("1_5yxh8")
 texture_progress = ExtResource("2_bng81")

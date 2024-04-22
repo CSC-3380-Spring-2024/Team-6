@@ -1,9 +1,10 @@
+Label
+GPUParticlesAttractorSphere3D
 TextureProgressBar
 CanvasLayer
 ProgressBar
 TextureRect
 Control
-Label
 CenterContainer
 Button
 VBoxContainer
@@ -11,4 +12,3 @@ PanelContainer
 Panel
 TextEdit
 MarginContainer
-ColorRect

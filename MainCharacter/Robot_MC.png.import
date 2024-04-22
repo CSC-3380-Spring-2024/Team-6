@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chk44irfa2vf2"
-path="res://.godot/imported/SelectionArrow.webp-1806bd5de7d7c189623e9d9279dc9215.ctex"
+uid="uid://crqn3qyvgj1yh"
+path="res://.godot/imported/Robot_MC.png-67c95f0a4506c1a93ff279141cdcfced.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GeneralAssets/SelectionArrow.webp"
-dest_files=["res://.godot/imported/SelectionArrow.webp-1806bd5de7d7c189623e9d9279dc9215.ctex"]
+source_file="res://MainCharacter/Robot_MC.png"
+dest_files=["res://.godot/imported/Robot_MC.png-67c95f0a4506c1a93ff279141cdcfced.ctex"]
 
 [params]
 

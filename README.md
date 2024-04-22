@@ -1,4 +1,4 @@
- Future Fuigitive
+# Future Fuigitive
 Welcome to our Godot game project! This repository contains the source code for our awesome game built using the Godot game engine.
 
 ## Getting Started
@@ -29,4 +29,4 @@ You have two options for downloading the game:
  - Derek: Communication 
  - Huston: Project Manager
  - Steven: QA
- - Andy: Design Lead
+ - <code style="color" : aqua"> Andy: Design Lead

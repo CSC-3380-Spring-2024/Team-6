@@ -6,6 +6,10 @@ public partial class PlayerController : CharacterBody2D
 	public const float Speed = 200.0f;
 	public const float JumpVelocity = -600.0f;
 
+	private float friction = .1f;
+
+	private float acceleration = .25f;
+
 	private int dashSpeed = 300;
 
 	private bool isDashing = false;
@@ -26,7 +30,6 @@ public partial class PlayerController : CharacterBody2D
 
 	private float climbTimerReset = 5f;
 
-	private int direction2 = 0;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -155,16 +158,25 @@ public partial class PlayerController : CharacterBody2D
 
 		//Sprite Animations + Movements
 		
+		
+		int direction2 = 0;
 		if(Input.IsActionPressed("ui_left")){
 			direction2 -= 1;
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Running Left");
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = true;
 		}
+
 		if(Input.IsActionPressed("ui_right")){
 			direction2 += 1;
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Running Right");
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = false;
 		}
-		if(direction2 == 0){
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Idle Right");
+		
+		if(direction2 != 0){
+			velocity.X = Mathf.Lerp(velocity.X, direction2 * Speed, acceleration);
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Run");
+		}
+		else{
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Idle");
+			velocity.X = Mathf.Lerp(velocity.X, 0, friction);
 		}
 		
 	}

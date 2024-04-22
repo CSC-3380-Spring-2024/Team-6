@@ -29,4 +29,4 @@ You have two options for downloading the game:
  - Derek: Communication 
  - Huston: Project Manager
  - Steven: QA
- - <code style="color" : aqua"> Andy: Design Lead
+ - Andy: Design Lead

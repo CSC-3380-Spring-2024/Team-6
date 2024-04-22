@@ -795,12 +795,6 @@ centered = false
 [node name="PauseMenu" parent="." instance=ExtResource("1_h3n3t")]
 visible = false
 
-<<<<<<< HEAD
-[node name="Control2" parent="." instance=ExtResource("5_s4d16")]
-
-[node name="Control" parent="." instance=ExtResource("4_vj4hv")]
-=======
 [node name="Control" parent="." instance=ExtResource("4_vj4hv")]
 
 [node name="Control2" parent="." instance=ExtResource("5_s4d16")]
->>>>>>> 9c1c8d6fbdfcb1c1945906f1ecceb0ad076a1551

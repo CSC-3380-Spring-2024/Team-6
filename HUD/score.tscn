@@ -1,11 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ud2x23rw1sof"]
 
 [ext_resource type="FontFile" uid="uid://m0r78rti0mpi" path="res://GeneralAssets/PressStart2P-Regular.ttf" id="1_wltak"]
-<<<<<<< HEAD
-[ext_resource type="Script" path="res://HUD/Label.cs" id="2_46vse"]
-=======
 [ext_resource type="Script" path="res://Label.cs" id="2_46vse"]
->>>>>>> 9c1c8d6fbdfcb1c1945906f1ecceb0ad076a1551
 
 [node name="Control" type="Control"]
 layout_mode = 3

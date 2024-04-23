@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713901677
+::res://::1713908248
 icon.svg::CompressedTexture2D::2879830636363989866::1710966166::1710966166::1::::<><>::
 Label.cs::CSharpScript::-1::1713628271::0::1::::<>Label<>::
 README.md::TextFile::-1::1713821344::0::1::::<><>::
@@ -11,20 +11,20 @@ Vulutres-Sheet.png::CompressedTexture2D::2266412200666428964::1713627044::171362
 ::res://GeneralAssets/::1713887670
 background.png::CompressedTexture2D::3187305404399742752::1713887670::1713887670::1::::<><>::
 PressStart2P-Regular.ttf::FontFile::894966662197060126::1710967211::1710967211::1::::<><>::
-::res://HUD/::1713895855
-healthBar.cs::CSharpScript::-1::1713895391::0::1::::<>Control<>::
-healthBar.tscn::PackedScene::8252257846641017704::1713895855::0::1::::<><>::uid://p64ajhy1ofkh::::res://HUD/healthbarUnder.png<>res://HUD/healthBar.cs<>uid://tmp325574kb::::res://HUD/healthbarProgress.png
+::res://HUD/::1713907555
+healthBar.cs::CSharpScript::-1::1713907400::0::1::::<>Control<>::
+healthBar.tscn::PackedScene::8252257846641017704::1713907555::0::1::::<><>::uid://p64ajhy1ofkh::::res://HUD/healthbarUnder.png<>res://HUD/healthBar.cs<>uid://tmp325574kb::::res://HUD/healthbarProgress.png
 healthbarProgress.png::CompressedTexture2D::39980081916874409::1713627044::1713627436::1::::<><>::
 healthbarUnder.png::CompressedTexture2D::1118589642386099775::1713627044::1713627436::1::::<><>::
-score.tscn::PackedScene::1411651900275156473::1713889157::0::1::::<><>::uid://m0r78rti0mpi::::res://GeneralAssets/PressStart2P-Regular.ttf<>res://Label.cs
-::res://kenney_voxel-pack 2/::0
-::res://Level1/::1713901677
+score.tscn::PackedScene::1411651900275156473::1713902066::0::1::::<><>::uid://m0r78rti0mpi::::res://GeneralAssets/PressStart2P-Regular.ttf<>res://Label.cs
+::res://Level1/::1713907625
 Background1.png::CompressedTexture2D::2527139833763109277::1712523265::1713627436::1::::<><>::
 Background2.png::CompressedTexture2D::7064775177184466233::1712523265::1713627436::1::::<><>::
 BG.png::CompressedTexture2D::8640335690731617229::1713627044::1713627437::1::::<><>::
 house01.png::CompressedTexture2D::8246331899536155919::1712523265::1713627436::1::::<><>::
 house02.png::CompressedTexture2D::3851048949968261471::1712523265::1713627436::1::::<><>::
-level1.tscn::PackedScene::6266840463386615038::1713901695::0::1::::<><>::uid://dvdpci3bs86w4::::res://Level1/BG.png<>uid://cmqjdn6b5gf0y::::res://Level1/Tile.png<>uid://d20auyg3bhni2::::res://Level1/Preview.png
+level1.tscn::PackedScene::6266840463386615038::1713907554::0::1::::<><>::uid://dvdpci3bs86w4::::res://Level1/BG.png<>uid://cqndomg20gku8::::res://MainMenu/pause_menu.tscn<>uid://cmqjdn6b5gf0y::::res://Level1/Tile.png<>uid://d20auyg3bhni2::::res://Level1/Preview.png<>uid://dptpqmd0oxd4k::::res://HUD/healthBar.tscn<>uid://ud2x23rw1sof::::res://HUD/score.tscn<>uid://ieaf78pxlj2n::::res://MainCharacter/playerdude.tscn
+main.tscn::PackedScene::6266840463386615038::1713907625::0::1::::<><>::uid://i6vjyebuoe5v::::res://BG.png<>uid://61jdvn531nei::::res://Tile.png<>uid://ctu1f6jctooew::::res://kenney_voxel-pack 2/Preview.png
 Preview.png::CompressedTexture2D::9106007260138818471::1713627044::1713627436::1::::<><>::
 sprite_2.png::CompressedTexture2D::6535190285769971179::1712523265::1713627436::1::::<><>::
 Tile.png::CompressedTexture2D::5648690076202416750::1713627044::1713627436::1::::<><>::
@@ -34,14 +34,14 @@ level3.txt::TextFile::-1::1711402540::0::1::::<><>::
 ::res://MainCharacter/::1713895855
 COWBOY_Sheet.png::CompressedTexture2D::7870592745269403951::1712523265::1713627436::1::::<><>::
 ENEMEY-Sheet.png::CompressedTexture2D::6211555199851056988::1712523265::1713627436::1::::<><>::
-playerdude.cs::CSharpScript::-1::1713895852::0::1::::<>CharacterBody2D<>::
+playerdude.cs::CSharpScript::-1::1713907551::0::1::::<>CharacterBody2D<>::
 playerdude.tscn::PackedScene::569778921528483759::1713895855::0::1::::<><>::res://MainCharacter/playerdude.cs<>uid://crqn3qyvgj1yh::::res://MainCharacter/Robot_MC.png<>uid://dptpqmd0oxd4k::::res://HUD/healthBar.tscn
 Robot_MC.png::CompressedTexture2D::5999921954844464999::1713814164::1713814177::1::::<><>::
 SPRITE-360-Sheet_Upscale-Sheet.png::CompressedTexture2D::4264858557234504555::1712523265::1713627436::1::::<><>::
-::res://MainMenu/::1713893012
+::res://MainMenu/::1713907555
 main_menu.cs::CSharpScript::-1::1713887670::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::7957583794130045172::1713893012::0::1::::<><>::uid://m0r78rti0mpi::::res://GeneralAssets/PressStart2P-Regular.ttf<>res://MainMenu/main_menu.cs<>uid://bln7pphl8qgn5::::res://GeneralAssets/background.png<>uid://crqn3qyvgj1yh::::res://MainCharacter/Robot_MC.png<>uid://b106ukru7ojl8::::res://MainCharacter/SPRITE-360-Sheet_Upscale-Sheet.png<>uid://b7fdcvsp1yqr3::::res://Level1/Western_Revolver.png
+main_menu.tscn::PackedScene::7957583794130045172::1713907555::0::1::::<><>::uid://m0r78rti0mpi::::res://GeneralAssets/PressStart2P-Regular.ttf<>res://MainMenu/main_menu.cs<>uid://bln7pphl8qgn5::::res://GeneralAssets/background.png<>uid://crqn3qyvgj1yh::::res://MainCharacter/Robot_MC.png<>uid://b106ukru7ojl8::::res://MainCharacter/SPRITE-360-Sheet_Upscale-Sheet.png<>uid://b7fdcvsp1yqr3::::res://Level1/Western_Revolver.png
 pause_menu.cs::CSharpScript::-1::1713890962::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::5922907569299906449::1713890995::0::1::::<><>::uid://m0r78rti0mpi::::res://GeneralAssets/PressStart2P-Regular.ttf<>res://MainMenu/pause_menu.cs
+pause_menu.tscn::PackedScene::5922907569299906449::1713902066::0::1::::<><>::uid://m0r78rti0mpi::::res://GeneralAssets/PressStart2P-Regular.ttf<>res://MainMenu/pause_menu.cs
 ::res://SplashScreen/::1713627437
 loading....png::CompressedTexture2D::4086045253700274957::1713627044::1713627437::1::::<><>::

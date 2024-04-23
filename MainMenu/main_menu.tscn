@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlmyiikd1drii"]
+[gd_scene load_steps=13 format=3 uid="uid://dlmyiikd1drii"]
 
 [ext_resource type="FontFile" uid="uid://m0r78rti0mpi" path="res://GeneralAssets/PressStart2P-Regular.ttf" id="1_g65h6"]
 [ext_resource type="Script" path="res://MainMenu/main_menu.cs" id="1_iiwmp"]
@@ -15,6 +15,9 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1yit"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gcke"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Animation" id="Animation_cke7u"]
@@ -140,10 +143,14 @@ theme_override_constants/margin_right = 50
 layout_mode = 2
 focus_mode = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.709804, 0, 0.0745098, 1)
+theme_override_colors/font_hover_color = Color(1, 0.207843, 0.207843, 1)
+theme_override_colors/font_focus_color = Color(0.698039, 0, 0.0745098, 1)
 theme_override_fonts/font = ExtResource("1_g65h6")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_n73b3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j1yit")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4gcke")
 text = "PLAY"
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
@@ -156,10 +163,14 @@ theme_override_constants/margin_right = 50
 layout_mode = 2
 focus_mode = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.709804, 0, 0.0745098, 1)
+theme_override_colors/font_hover_color = Color(1, 0.207843, 0.207843, 1)
+theme_override_colors/font_focus_color = Color(0.698039, 0, 0.0745098, 1)
 theme_override_fonts/font = ExtResource("1_g65h6")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_n73b3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j1yit")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4gcke")
 text = "OPTIONS"
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
@@ -172,10 +183,14 @@ theme_override_constants/margin_right = 50
 layout_mode = 2
 focus_mode = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.709804, 0, 0.0745098, 1)
+theme_override_colors/font_hover_color = Color(1, 0.207843, 0.207843, 1)
+theme_override_colors/font_focus_color = Color(0.698039, 0, 0.0745098, 1)
 theme_override_fonts/font = ExtResource("1_g65h6")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_n73b3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j1yit")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4gcke")
 text = "QUIT"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

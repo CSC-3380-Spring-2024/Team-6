@@ -30,6 +30,16 @@ public partial class PlayerController : CharacterBody2D
 
 	private float climbTimerReset = 5f;
 
+	private AnimatedSprite2D animatedSprite;
+
+	[Export]
+	public PackedScene GhostPlayerInstance;
+
+	public override void _Ready(){
+
+		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+	}
+
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -113,6 +123,13 @@ public partial class PlayerController : CharacterBody2D
 			float myFloatDelta = Convert.ToSingle(delta); //conversion double to float for dashTimer
 
 			dashTimer -= myFloatDelta;
+
+			GhostPlayer ghost = GhostPlayerInstance.Instantiate() as GhostPlayer;
+			Owner.AddChild(ghost);
+			ghost.GlobalPosition = this.GlobalPosition;
+			ghost.SetHValue(animatedSprite.FlipH);
+
+
 			if(dashTimer <= 0){
 				isDashing = false;
 				velocity = new Vector2(0,0); //stops the slding when dashing
@@ -162,20 +179,20 @@ public partial class PlayerController : CharacterBody2D
 		int direction2 = 0;
 		if(Input.IsActionPressed("ui_left")){
 			direction2 -= 1;
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = true;
+			animatedSprite.FlipH = true;
 		}
 
 		if(Input.IsActionPressed("ui_right")){
 			direction2 += 1;
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = false;
+			animatedSprite.FlipH = false;
 		}
 		
 		if(direction2 != 0){
 			velocity.X = Mathf.Lerp(velocity.X, direction2 * Speed, acceleration);
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Run");
+			animatedSprite.Play("Run");
 		}
 		else{
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Idle");
+			animatedSprite.Play("Idle");
 			velocity.X = Mathf.Lerp(velocity.X, 0, friction);
 		}
 		

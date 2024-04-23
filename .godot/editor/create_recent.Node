@@ -1,14 +1,14 @@
+Label
+TextEdit
+TextureButton
 CanvasLayer
 RichTextLabel
-TextEdit
 AnimatedSprite2D
 Sprite2D
 AnimationPlayer
-Label
 GPUParticlesAttractorSphere3D
 TextureProgressBar
 ProgressBar
 TextureRect
 Control
 CenterContainer
-Button

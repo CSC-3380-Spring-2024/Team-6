@@ -1,11 +1,6 @@
-res://Level1/level1.tscn
+res://MainMenu/main_menu.tscn
 res://HUD/healthBar.cs
 res://Label.cs
 res://MainCharacter/playerdude.cs
 res://MainMenu/main_menu.cs
 res://MainMenu/pause_menu.cs
-res://MainMenu/pause_menu.tscn
-res://HUD/score.tscn
-res://MainMenu/main_menu.tscn
-res://HUD/healthBar.tscn
-res://HUD/TextureProgressBar.cs

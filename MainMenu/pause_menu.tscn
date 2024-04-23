@@ -31,25 +31,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tspsv")
 
-[node name="PanelContainer" type="CenterContainer" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -140.0
+offset_left = -180.0
 offset_top = -164.0
-offset_right = 140.0
+offset_right = 180.0
 offset_bottom = 164.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_7woju")
@@ -58,10 +59,10 @@ text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Resume" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -74,7 +75,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_m7nad")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wca2l")
 text = "Resume"
 
-[node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Restart" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -87,7 +88,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_m7nad")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wca2l")
 text = "Restart"
 
-[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -100,6 +101,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_m7nad")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wca2l")
 text = "Quit"
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
-[connection signal="button_up" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_button_up"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="button_up" from="CanvasLayer/PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_button_up"]

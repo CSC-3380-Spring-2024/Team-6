@@ -3,6 +3,18 @@ using System;
 
 public partial class playerdude : CharacterBody2D
 {
+
+	[Signal]
+	public delegate void HealthChangedEventHandler(float newHealth);
+    private float health = 100;
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        EmitSignal("HealthChanged", health);
+    }
+	
+	
 	public const float Speed = 200.0f;
 	public const float JumpVelocity = -600.0f;
 
@@ -37,7 +49,7 @@ public partial class playerdude : CharacterBody2D
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
-	
+
 	public override void _PhysicsProcess(double delta)
 	{
 		
@@ -56,6 +68,7 @@ public partial class playerdude : CharacterBody2D
 		if(IsOnFloor()){
 			if(Input.IsActionPressed("ui_accept")){
 				velocity.Y = JumpVelocity;
+					TakeDamage(5);
 				
 			}
 			canClimb = true;
@@ -189,5 +202,5 @@ public partial class playerdude : CharacterBody2D
 	private void processClimb(float delta){
 		
 	}
-}
 
+}

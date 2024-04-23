@@ -1,1 +1,9 @@
 res://MainMenu/main_menu.tscn
+res://Label.cs
+res://MainMenu/main_menu.cs
+res://MainMenu/pause_menu.cs
+res://MainCharacter/playerdude.tscn
+res://Level1/level1.tscn
+res://MainCharacter/playerdude.cs
+res://Level2/PlayerController.cs
+res://MainMenu/pause_menu.tscn

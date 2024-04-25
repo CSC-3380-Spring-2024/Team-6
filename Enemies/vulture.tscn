@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dud5osyhoudl6"]
+
+[ext_resource type="Script" path="res://vulture.gd" id="1_42s7t"]
+[ext_resource type="Texture2D" uid="uid://d2j2c2efqdql3" path="res://Vulutres-Sheet.png" id="1_pjyvn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fko6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pjyvn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxls3"]
+size = Vector2(527, 388)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8pck7"]
+radius = 21.0238
+
+[node name="Vulture" type="CharacterBody2D"]
+script = ExtResource("1_42s7t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fko6t")
+animation = &"idle"
+frame_progress = 0.768289
+
+[node name="detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+position = Vector2(-1.5, 110)
+shape = SubResource("RectangleShape2D_uxls3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8pck7")
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]

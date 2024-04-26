@@ -23,3 +23,10 @@ You have two options for downloading the game:
     ```bash
     Click on the green "Code" button above and select "Download ZIP".
     Extract the ZIP file to your desired location.
+
+### Running the Game
+
+After putting the game files on your local machine, you may open the GoDot software and open the project folder in which you downloaded the game.
+You may then hit the play button at the top-right corner of the GoDot software.
+The game should begin. Enjoy!!!
+

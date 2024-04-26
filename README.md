@@ -17,7 +17,7 @@ You have two options for downloading the game:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/godot-game-project.git
+   git clone https://github.com/CSC-3380-Spring-2024/Team-6.git
 
 2. Download ZIP:
     ```bash

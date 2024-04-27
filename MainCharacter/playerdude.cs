@@ -42,8 +42,14 @@ public partial class playerdude : CharacterBody2D
 
 	private float climbTimerReset = 5f;
 
+ 	private AnimatedSprite2D animatedSprite;
+
 	[Export]
 	public PackedScene GhostPlayerInstance;
+
+ 	public override void _Ready(){
+  		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+    }
 
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -130,7 +136,11 @@ public partial class playerdude : CharacterBody2D
 
 			dashTimer -= myFloatDelta;
 
-			
+			GhostPlayer ghost = GhostPlayerInstance.Instantiate() as GhostPlayer;
+			Owner.AddChild(ghost);
+			ghost.GlobalPosition = this.GlobalPosition;
+			ghost.SetHValue(animatedSprite.FlipH);
+   
 			if(dashTimer <= 0){
 				isDashing = false;
 				velocity = new Vector2(0,0); //stops the slding when dashing

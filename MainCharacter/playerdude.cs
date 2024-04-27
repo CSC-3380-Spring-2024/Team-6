@@ -190,20 +190,20 @@ public partial class playerdude : CharacterBody2D
 		int direction2 = 0;
 		if(Input.IsActionPressed("ui_left")){
 			direction2 -= 1;
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = true;
+			animatedSprite.FlipH = true;
 		}
 
 		if(Input.IsActionPressed("ui_right")){
 			direction2 += 1;
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = false;
+			animatedSprite.FlipH = false;
 		}
 		
 		if(direction2 != 0){
 			velocity.X = Mathf.Lerp(velocity.X, direction2 * Speed, acceleration);
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Run");
+			animatedSprite.Play("Run");
 		}
 		else{
-			GetNode<AnimatedSprite2D>("AnimatedSprite2D").Play("Idle");
+			animatedSprite.Play("Idle");
 			velocity.X = Mathf.Lerp(velocity.X, 0, friction);
 		}
 		

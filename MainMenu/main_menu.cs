@@ -6,6 +6,7 @@ public partial class main_menu : Control
 
 	private MarginContainer options;
 	private MarginContainer mainDefault;
+	private Sprite2D sprite;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready(){
@@ -14,6 +15,8 @@ public partial class main_menu : Control
 			mainDefault = GetNode<MarginContainer>("mainDefault");
 			mainDefault.Visible = true;
 			options.Visible = false;
+			sprite = GetNode<Sprite2D>("Sprite2D");
+			sprite.Visible = true;
 			
 	}
 
@@ -34,12 +37,14 @@ public partial class main_menu : Control
 	public void _on_options_button_up() {
 		options.Visible=true;	
 		mainDefault.Visible=false;
+		sprite.Visible = false;
 	}
 
 	public void _on_quit_button_up() {
 		GetTree().Quit();
 	}
 	public void _on_back_button_up(){
+		sprite.Visible = true;
 		options.Visible = false;
 		mainDefault.Visible=true;
 	}

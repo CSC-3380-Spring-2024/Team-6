@@ -183,3 +183,5 @@ target_position = Vector2(0, 15)
 position = Vector2(0, 10.93)
 rotation = -1.5708
 target_position = Vector2(0, 15)
+
+[connection signal="HealthChanged" from="." to="Camera2D/Control" method="_on_player_health_changed"]

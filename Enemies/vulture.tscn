@@ -1,7 +1,24 @@
 [gd_scene load_steps=10 format=3 uid="uid://cu7gbvsbcupa2"]
 
-[ext_resource type="Script" path="res://Vulture.cs" id="1_hsivk"]
-[ext_resource type="Texture2D" uid="uid://csd6ie5fh45jx" path="res://Vulutres-Sheet-Sheet.png" id="2_lwlqg"]
+[ext_resource type="Texture2D" uid="uid://b8ic338xps17p" path="res://Enemies/Vulutres-Sheet-Sheet.png" id="2_lwlqg"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_80rc1"]
+script/source = "using Godot;
+using System;
+
+public partial class vulture : Node
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3hy2"]
 atlas = ExtResource("2_lwlqg")
@@ -46,7 +63,7 @@ size = Vector2(306, 310.5)
 radius = 21.8403
 
 [node name="Vulture" type="CharacterBody2D"]
-script = ExtResource("1_hsivk")
+script = SubResource("CSharpScript_80rc1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jco18")

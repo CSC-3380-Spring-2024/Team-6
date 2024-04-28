@@ -32,6 +32,7 @@ grow_vertical = 2
 script = ExtResource("1_tspsv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="PanelContainer" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 8

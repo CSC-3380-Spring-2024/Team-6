@@ -1,10 +1,10 @@
+CanvasLayer
+Sprite2D
 Label
 TextEdit
 TextureButton
-CanvasLayer
 RichTextLabel
 AnimatedSprite2D
-Sprite2D
 AnimationPlayer
 GPUParticlesAttractorSphere3D
 TextureProgressBar

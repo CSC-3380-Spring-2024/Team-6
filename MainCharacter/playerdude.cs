@@ -7,13 +7,6 @@ public partial class playerdude : CharacterBody2D
 	[Signal]
 	public delegate void HealthChangedEventHandler(float newHealth);
     private float health = 100;
-
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-        EmitSignal("HealthChanged", health);
-    }
-	
 	
 	public const float Speed = 200.0f;
 	public const float JumpVelocity = -600.0f;
@@ -49,7 +42,7 @@ public partial class playerdude : CharacterBody2D
 
  	public override void _Ready(){
   		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-    }
+	}
 
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -74,7 +67,7 @@ public partial class playerdude : CharacterBody2D
 		if(IsOnFloor()){
 			if(Input.IsActionPressed("ui_accept")){
 				velocity.Y = JumpVelocity;
-					TakeDamage(5);
+				TakeDamage(10);
 				
 			}
 			canClimb = true;
@@ -136,10 +129,10 @@ public partial class playerdude : CharacterBody2D
 
 			dashTimer -= myFloatDelta;
 
-			GhostPlayer ghost = GhostPlayerInstance.Instantiate() as GhostPlayer;
-			Owner.AddChild(ghost);
-			ghost.GlobalPosition = this.GlobalPosition;
-			ghost.SetHValue(animatedSprite.FlipH);
+			//GhostPlayer ghost = GhostPlayerInstance.Instantiate() as GhostPlayer;
+			//Owner.AddChild(ghost);
+			//ghost.GlobalPosition = this.GlobalPosition;
+			//ghost.SetHValue(animatedSprite.FlipH);
    
 			if(dashTimer <= 0){
 				isDashing = false;
@@ -212,5 +205,11 @@ public partial class playerdude : CharacterBody2D
 	private void processClimb(float delta){
 		
 	}
+
+	public void TakeDamage(float damage)
+    {
+        health -= damage;
+        EmitSignal("HealthChanged", health);
+    }
 
 }

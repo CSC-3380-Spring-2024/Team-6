@@ -1,3 +1,4 @@
+TileMap
 CanvasLayer
 Sprite2D
 Label
@@ -11,4 +12,3 @@ TextureProgressBar
 ProgressBar
 TextureRect
 Control
-CenterContainer

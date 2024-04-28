@@ -92,6 +92,7 @@ grow_vertical = 2
 script = ExtResource("1_gpwwa")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 

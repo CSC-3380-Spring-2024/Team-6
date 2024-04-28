@@ -1,64 +1,65 @@
-[gd_scene load_steps=9 format=3 uid="uid://dud5osyhoudl6"]
+[gd_scene load_steps=10 format=3 uid="uid://cu7gbvsbcupa2"]
 
-[ext_resource type="Texture2D" uid="uid://b8ic338xps17p" path="res://Enemies/Vulutres-Sheet-Sheet.png" id="1_42s7t"]
+[ext_resource type="Script" path="res://Vulture.cs" id="1_hsivk"]
+[ext_resource type="Texture2D" uid="uid://csd6ie5fh45jx" path="res://Vulutres-Sheet-Sheet.png" id="2_lwlqg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbvpr"]
-atlas = ExtResource("1_42s7t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3hy2"]
+atlas = ExtResource("2_lwlqg")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_djoke"]
-atlas = ExtResource("1_42s7t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugs8v"]
+atlas = ExtResource("2_lwlqg")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y4shg"]
-atlas = ExtResource("1_42s7t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jthj"]
+atlas = ExtResource("2_lwlqg")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_44n2k"]
-atlas = ExtResource("1_42s7t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cl5dn"]
+atlas = ExtResource("2_lwlqg")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_sh6te"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jco18"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pbvpr")
+"texture": SubResource("AtlasTexture_m3hy2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_djoke")
+"texture": SubResource("AtlasTexture_ugs8v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y4shg")
+"texture": SubResource("AtlasTexture_4jthj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_44n2k")
+"texture": SubResource("AtlasTexture_cl5dn")
 }],
 "loop": true,
-"name": &"default",
-"speed": 4.0
+"name": &"Idle",
+"speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxls3"]
-size = Vector2(527, 388)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftssa"]
+size = Vector2(306, 310.5)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8pck7"]
-radius = 21.0238
+[sub_resource type="CircleShape2D" id="CircleShape2D_8b6db"]
+radius = 21.8403
 
 [node name="Vulture" type="CharacterBody2D"]
-motion_mode = 1
+script = ExtResource("1_hsivk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_sh6te")
-frame_progress = 0.293706
+sprite_frames = SubResource("SpriteFrames_jco18")
+animation = &"Idle"
+frame_progress = 0.496177
 
 [node name="detection_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-position = Vector2(-1.5, 110)
-shape = SubResource("RectangleShape2D_uxls3")
+shape = SubResource("RectangleShape2D_ftssa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_8pck7")
+shape = SubResource("CircleShape2D_8b6db")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]

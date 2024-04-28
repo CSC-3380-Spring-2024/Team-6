@@ -1,11 +1,1 @@
-res://Level1/level1.tscn
-res://Enemies/vulture.tscn
-res://Enemies/Vultures.cs
-res://HUD/healthBar.cs
-res://Label.cs
-res://MainCharacter/GhostPlayer.cs
-res://MainCharacter/playerdude.cs
-res://MainMenu/Dead.cs
-res://MainMenu/main_menu.cs
-res://MainMenu/pause_menu.cs
-res://MainMenu/pause_menu.tscn
+res://MainMenu/main_menu.tscn

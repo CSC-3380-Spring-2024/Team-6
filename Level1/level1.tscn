@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cvjx7gsn4pv7c"]
+[gd_scene load_steps=14 format=3 uid="uid://cvjx7gsn4pv7c"]
 
 [ext_resource type="Texture2D" uid="uid://dvdpci3bs86w4" path="res://Level1/BG.png" id="1_0fvrp"]
 [ext_resource type="PackedScene" uid="uid://dptpqmd0oxd4k" path="res://HUD/healthBar.tscn" id="4_v7xng"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dpqt48dwxihf0" path="res://Level1/newTiles/house01.png" id="5_t8xex"]
 [ext_resource type="PackedScene" uid="uid://ieaf78pxlj2n" path="res://MainCharacter/playerdude.tscn" id="6_6jm0n"]
 [ext_resource type="PackedScene" uid="uid://cqndomg20gku8" path="res://MainMenu/pause_menu.tscn" id="7_0cnea"]
-[ext_resource type="PackedScene" uid="uid://ddeani6q2a4x3" path="res://Enemies/vulture.tscn" id="8_jgrlc"]
 [ext_resource type="PackedScene" uid="uid://b8up624d6gp76" path="res://MainMenu/Dead.tscn" id="9_2tlvp"]
 [ext_resource type="Texture2D" uid="uid://wepj6dqlwt6s" path="res://Level1/newTiles/tiles.png" id="10_e6r4q"]
 
@@ -2126,9 +2125,6 @@ centered = false
 position = Vector2(16, 560)
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_0cnea")]
-
-[node name="Vulture" parent="." instance=ExtResource("8_jgrlc")]
-position = Vector2(320, 496)
 
 [node name="Dead" parent="." instance=ExtResource("9_2tlvp")]
 

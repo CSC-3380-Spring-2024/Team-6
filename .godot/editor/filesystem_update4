@@ -1,1 +1,9 @@
 res://Level1/level1.tscn
+res://MainMenu/main_menu.tscn
+res://HUD/healthBar.cs
+res://Label.cs
+res://Level1/GhostPlayer.cs
+res://MainCharacter/playerdude.cs
+res://MainMenu/Dead.cs
+res://MainMenu/main_menu.cs
+res://MainMenu/pause_menu.cs

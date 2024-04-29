@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Future_Fugitive")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fe6bd336b9849441327ff43b0bc00efe91e3738")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eac407d26e125d7ac2c8575042c4fe5a945682a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Future_Fugitive")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Future_Fugitive")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

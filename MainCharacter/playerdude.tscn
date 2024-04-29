@@ -161,7 +161,7 @@ autoplay = "Idle"
 centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(225, -75)
+offset = Vector2(0, -75)
 zoom = Vector2(2, 2)
 
 [node name="Control" parent="Camera2D" instance=ExtResource("3_13080")]

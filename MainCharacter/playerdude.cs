@@ -7,6 +7,17 @@ public partial class playerdude : CharacterBody2D
 	[Signal]
 	public delegate void HealthChangedEventHandler(float newHealth);
     private float health = 100;
+
+		public void TakeDamage(float damage)
+    {
+        health -= damage;
+        EmitSignal("HealthChanged", health);
+    }
+
+	private void _on_area_2d_2_body_entered(float newCollision){
+		health -= newCollision;
+	}
+
 	
 	public const float Speed = 200.0f;
 	public const float JumpVelocity = -600.0f;
@@ -39,6 +50,7 @@ public partial class playerdude : CharacterBody2D
 
 	[Export]
 	public PackedScene GhostPlayerInstance;
+	
 
  	public override void _Ready(){
   		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
@@ -67,7 +79,7 @@ public partial class playerdude : CharacterBody2D
 		if(IsOnFloor()){
 			if(Input.IsActionPressed("ui_accept")){
 				velocity.Y = JumpVelocity;
-				TakeDamage(1);
+				TakeDamage(2);
 			}
 			canClimb = true;
 			isDashAvailable = true;
@@ -204,11 +216,4 @@ public partial class playerdude : CharacterBody2D
 	private void processClimb(float delta){
 		
 	}
-
-	public void TakeDamage(float damage)
-    {
-        health -= damage;
-        EmitSignal("HealthChanged", health);
-    }
-
 }

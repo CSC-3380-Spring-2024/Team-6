@@ -19,9 +19,6 @@ public partial class Label : Godot.Label
 	}
 
 	private void OnMobKilled(){
-		for(int i = 1; i < 10000; i++){			
-		_score += 1;
-		Text = $"Score: {_score}";
-		}
+		Text = "Score: 3380";
 	}
 }

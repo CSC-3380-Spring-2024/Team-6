@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh5y2jq77a3vf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xv35"]
+size = Vector2(21, 208)
+
+[sub_resource type="CSharpScript" id="CSharpScript_3jh85"]
+script/source = "using Godot;
+using System;
+
+public class CactusDamageArea : Area2D
+{
+	[Export]
+	private int damage = 10;
+
+	public override void _Ready()
+	{
+		Connect(\"body_entered\", this, nameof(OnBodyEntered));
+	}
+
+	private void OnBodyEntered(Node body)
+	{
+		if (body is Player)
+		{
+			Player player = (Player)body;
+			player.TakeDamage(damage);
+		}
+	}
+}
+"
+
+[node name="Area2D2" type="Area2D"]
+
+[node name="damage_area" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 20)
+shape = SubResource("RectangleShape2D_6xv35")
+script = SubResource("CSharpScript_3jh85")

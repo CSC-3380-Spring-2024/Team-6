@@ -67,7 +67,7 @@ public partial class playerdude : CharacterBody2D
 		if(IsOnFloor()){
 			if(Input.IsActionPressed("ui_accept")){
 				velocity.Y = JumpVelocity;
-				
+				TakeDamage(1);
 			}
 			canClimb = true;
 			isDashAvailable = true;

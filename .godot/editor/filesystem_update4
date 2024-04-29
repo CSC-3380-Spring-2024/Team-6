@@ -5,3 +5,4 @@ res://MainCharacter/playerdude.cs
 res://MainMenu/Dead.cs
 res://MainMenu/main_menu.cs
 res://MainMenu/pause_menu.cs
+res://Level2/PlayerController.cs

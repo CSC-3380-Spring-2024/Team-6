@@ -1,5 +1,3 @@
-res://Level1/level1.tscn
-res://MainMenu/main_menu.tscn
 res://HUD/healthBar.cs
 res://Label.cs
 res://Level1/GhostPlayer.cs

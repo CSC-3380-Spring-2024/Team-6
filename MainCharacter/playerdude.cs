@@ -140,10 +140,10 @@ public partial class playerdude : CharacterBody2D
 
 			dashTimer -= myFloatDelta;
 
-			//GhostPlayer ghost = GhostPlayerInstance.Instantiate() as GhostPlayer;
-			//Owner.AddChild(ghost);
-			//ghost.GlobalPosition = this.GlobalPosition;
-			//ghost.SetHValue(animatedSprite.FlipH);
+			GhostPlayer ghost = GhostPlayerInstance.Instantiate() as GhostPlayer;
+			Owner.AddChild(ghost);
+			ghost.GlobalPosition = this.GlobalPosition;
+			ghost.SetHValue(animatedSprite.FlipH);
    
 			if(dashTimer <= 0){
 				isDashing = false;

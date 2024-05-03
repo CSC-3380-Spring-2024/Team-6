@@ -20,4 +20,5 @@ public partial class healthBar : Control
 	private void _on_player_health_changed(int newHealth){
 		HealthProgressBar.Value=newHealth;
 	}
+    
 }

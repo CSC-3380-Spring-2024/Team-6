@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cvjx7gsn4pv7c"]
+[gd_scene load_steps=13 format=3 uid="uid://cvjx7gsn4pv7c"]
 
 [ext_resource type="Texture2D" uid="uid://dvdpci3bs86w4" path="res://Level1/BG.png" id="1_0fvrp"]
 [ext_resource type="PackedScene" uid="uid://dptpqmd0oxd4k" path="res://HUD/healthBar.tscn" id="4_v7xng"]
 [ext_resource type="Texture2D" uid="uid://bqqluw2o8mbk2" path="res://Level1/newTiles/house2.png" id="5_j6fyn"]
-[ext_resource type="PackedScene" uid="uid://ud2x23rw1sof" path="res://HUD/score.tscn" id="5_o3d8r"]
 [ext_resource type="Texture2D" uid="uid://dpqt48dwxihf0" path="res://Level1/newTiles/house01.png" id="5_t8xex"]
 [ext_resource type="PackedScene" uid="uid://ieaf78pxlj2n" path="res://MainCharacter/playerdude.tscn" id="6_6jm0n"]
 [ext_resource type="PackedScene" uid="uid://cqndomg20gku8" path="res://MainMenu/pause_menu.tscn" id="7_0cnea"]
@@ -2156,9 +2155,6 @@ texture = ExtResource("1_0fvrp")
 centered = false
 
 [node name="Control" parent="." instance=ExtResource("4_v7xng")]
-visible = false
-
-[node name="Control2" parent="." instance=ExtResource("5_o3d8r")]
 visible = false
 
 [node name="Player" parent="." instance=ExtResource("6_6jm0n")]

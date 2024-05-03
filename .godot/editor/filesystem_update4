@@ -1,4 +1,8 @@
 res://Level1/level1.tscn
+res://Level1/catcus.tscn
+res://MainMenu/main_menu.tscn
+res://MainCharacter/playerdude.tscn
+res://HUD/score.tscn
 res://HUD/healthBar.cs
 res://Label.cs
 res://Level1/GhostPlayer.cs
@@ -6,11 +10,3 @@ res://MainCharacter/playerdude.cs
 res://MainMenu/Dead.cs
 res://MainMenu/main_menu.cs
 res://MainMenu/pause_menu.cs
-res://Level1/Cactus.cs
-res://Level1/cactus.tscn
-res://MainCharacter/playerdude.tscn
-res://GhostPlayer.cs
-res://GhostPlayer.tscn
-res://Level1/catcus.tscn
-res://MainMenu/main_menu.tscn
-res://HUD/score.tscn

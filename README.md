@@ -1,4 +1,4 @@
-# Future Fuigitive ![singularrunsprite](https://github.com/CSC-3380-Spring-2024/Team-6/assets/41880054/17b0dafe-a903-4cab-b4b0-cb1a04da5d90)
+#![singularrunsprite](https://github.com/CSC-3380-Spring-2024/Team-6/assets/41880054/ca37adb1-1330-4828-8dbc-f084b4b96b40) Future Fuigitive ![singularrunsprite](https://github.com/CSC-3380-Spring-2024/Team-6/assets/41880054/17b0dafe-a903-4cab-b4b0-cb1a04da5d90)
 
 Welcome to our Godot game project! This repository contains the source code for our awesome game built using the Godot game engine.
 

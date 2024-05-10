@@ -31,7 +31,7 @@ After putting the game files on your local machine, you may open the GoDot softw
 
 You may then hit the play button at the top-right corner of the GoDot software.
 
-**DISCLAIMER**: Game has some collision issues that can be handled by resetting the game from the in-game menu once.
+**DISCLAIMER**: Game has some collision issues that we are trying to fix. This issue can be temporarily resolved by pausing and pressing the reset button.
 
 The game should begin. Enjoy!!!
 
